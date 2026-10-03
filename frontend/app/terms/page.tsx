@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { Brand } from '@/components/brand'
 import { PRODUCT } from '@/lib/brand'
 import { getT } from '@/lib/i18n/server'
@@ -75,6 +76,7 @@ export default async function TermsPage() {
 
       <Section title={t('deleteTitle')}>
         <p>{t('deletePre')}<Contact fallback={t('operator')} />{t('deletePost')}</p>
+        <p><Link className="text-foreground underline" href="/privacy">{t('privacyLink')}</Link></p>
       </Section>
 
       <Section title={t('warrantyTitle')}>
